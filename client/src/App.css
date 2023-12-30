@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto&family=Schibsted+Grotesk&family=Ubuntu&family=Varela+Round&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  overflow-x: hidden;
+  cursor: url();
+  font-family: 'Inter',sans-serif;
+}
+:root{
+
+  --text: #e8f2ed;
+  --background: #040606;
+  --primary: #BBCABA;
+  --secondary: #b8b8b8;
+  --accent: #e2dfdf;
+}
+.container{
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+.navbar{
+  width: 100%;
+  height: 112px;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8.125rem;
+  padding-right: 15rem;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  overflow:hidden ;
+}
+.left{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  /* border: 1px solid red; */
+  
+}
+.left a{
+  text-decoration: none;
+  padding: 0 9px;
+  color: var(--text);
+  text-transform: uppercase;
+  font-family: 'Inter',sans-serif;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+.left a hr{
+  width: 0;
+}
+.left a::after{
+  content: "";
+  position: absolute;
+  background-color: var(--accent);
+  height: .1px;
+  width: 0%;
+  left: 0;
+  bottom: 5%;
+  transition: all 0.3s ease-in-out;
+
+}.left a:hover{
+  color: var(--text);
+}
+.left a:hover::after{
+
+  width: 100%;
+}
+.right{
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 30px;
+}
+.hero{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background);
+  position: relative;
+}
+.hero img{
+  width: 60rem;
+  height: 41.375rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 2;
+
+}
+.hero .marquee{
+  width: 100vw;
+  display: flex;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0rem 1rem;
+  overflow: hidden;
+  user-select: none;
+
+}
+.marquee .marqueegroup{
+  width: 100vw;
+  display: flex;  
+  align-items: center;
+  gap:60px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0rem 1rem;
+  animation: scrollX 20s linear infinite;
+}
+.marquee  h1{
+  text-transform: uppercase;
+  font-family: 'Inter',sans-serif;
+  font-size: 4rem;
+  overflow: hidden;
+  /* animation: scrollX 10000ms linear infinite; */
+}
+.marquee .stroke h1{
+  color: var(--background);
+  -webkit-text-stroke: 1px var(--text);
+
+  
+}
+@keyframes scrollX {
+  0%{
+    transform: translate(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+.about{
+  width: 100%;
+  height: 130vh;
+  background-color: var(--text);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  flex-direction: column;
+  gap: 66px;
+}
+ .heading{
+overflow: hidden;
+height: 80px;
+
+display: flex;
+align-items: center;
+width: 507px;
+justify-content: space-between;
+}
+.heading h1{
+  font-size:4rem;
+  height: 80px;
+}
+.info{
+  /* background-color: red; */
+  width: 90%;
+  height: 99%;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  gap: 60px;
+
+}
+.info .pfp{
+  height:650px;
+  width: 450px;
+  background-image: url('/pfp.webp');
+  border-radius: 7px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.info .summary{
+  width: 675px;
+  height: 670px;
+}
+.info .summary h2{
+  font-size: 48px;
+  color: var(--background);
+  font-weight: 700;
+  margin-bottom: 34px;
+}
+.info .summary p{
+  color: #040606;
+  font-size: 32px;
+  margin-bottom: 1.2rem;
+}
+.services{
+  width: 100%;
+  height: 200vh;
+  background-color: var(--background);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  flex-direction: column;
+  gap: 66px
+}
+.services .heading h1{
+  color:var(--primary);
+}
+.offer{ 
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  gap:60px;
+
+}
+.offer .card1{
+  height: 551px;
+  width: 571px;
+  margin-right: 5rem;
+  border-right:1px solid #b8b8b8;
+}
+.offer .card1 h1{
+font-size:3rem;
+font-family: 'Inter',sans-serif;
+font-weight: 700;
+height: 4rem;
+
+}
+.offer .card1 h3{
+  font-size: 2.5rem;
+  font-weight: 200;
+}
